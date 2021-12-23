@@ -1,0 +1,27 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Main Page';
+	- var pageClass = '_page';
+
+block append head
+	include ../static/head
+
+block append header
+	include ../static/header
+
+block append content
+	include ../modules/section1.pug
+	include ../modules/section2.pug
+	include ../modules/section3.pug
+	include ../modules/section4.pug
+	include ../modules/section5.pug
+
+block append footer
+	include ../static/footer
+
+block append popup
+	include ../includes/popup
+
+block prepend script
+	script(src='js/polyfills.min.js')

@@ -1,0 +1,57 @@
+include ../utils/mixins
+block variables
+	- var title = 'Main Page';
+	- var description = '';
+	- var keywords = '';
+	- var pageClass = '_page';
+
+doctype html
+//html(lang='ru')
+html(lang='zxx')
+	//Head
+	head
+		block head
+		meta(charset='utf-8')
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content='IE = edge')
+		<![endif]-->
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		//-meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+		link(rel="shortcut icon" href="favicon.ico")
+		link(rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 992px)")
+		link(rel="stylesheet" type="text/css" href="css/style.css")
+		title #{title}
+	//Body
+	body
+		//Wrapper
+		.wrapper#wrapper
+			//Header
+			header.header#header._lp
+				.header__container
+					.header__content
+						//a.header__logo(href='#header') logo
+						span._link(data-link='.wrapper') logo
+							//img.header__img(src='' alt='' loading='lazy')
+						include ../includes/burger
+						block header
+
+			//Main
+			main(class=pageClass)
+				block content
+
+				//Back-to-top
+				.up__block
+					.up
+						span._link(data-link='.wrapper') up
+
+			//Footer
+			footer.footer#footer
+				.footer__container
+					.footer__content
+						block footer
+
+			block popup
+
+		//Scripts
+		block script
+			script(src='js/script.js')

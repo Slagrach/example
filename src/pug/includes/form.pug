@@ -1,0 +1,18 @@
+form.form(style='width: 450px; border-radius: 10px; overflow: hidden; margin: 35px auto;')
+	//  Hidden Required Fields
+	input(type='hidden', name='project_name', value='Slagrach')
+	input(type='hidden', name='admin_email', value='slagrach@gmail.com')
+	input(type='hidden', name='form_subject', value='Theme')
+	//  END Hidden Required Fields
+	input#input._req(type='text', name='Name', data-error='Ошибка', data-value='', placeholder='You name...', required, onkeyup='addRemoveUsername()')
+	br
+	input#input2._email(type='text', name='E-mail', placeholder='You E-mail...', required)
+	br
+	input#input3(type='text', name='Phone', placeholder='You phone...' style='border-radius: 0 0 10px 10px;')
+	br
+	button._btn(style='margin-top: 20px') Sen
+
+//form#login-form
+//	span#name
+//	input#username-input(type="text" placeholder="USERNAME" onkeyup='addRemoveUsername()')
+
